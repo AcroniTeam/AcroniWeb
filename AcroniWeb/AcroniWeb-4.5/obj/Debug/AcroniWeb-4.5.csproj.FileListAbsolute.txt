@@ -986,3 +986,7 @@ C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\Ac
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.Serialization.JsonNet.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.xml

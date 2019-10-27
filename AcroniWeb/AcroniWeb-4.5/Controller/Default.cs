@@ -5,15 +5,29 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
 
 public class Default
 {
     SQLMetodos sql = new SQLMetodos();
     Utilitarios ut = new Utilitarios();
     Valida v = new Valida();
+
+    IFirebaseConfig config = new FirebaseConfig
+    {
+        AuthSecret = "SkeKuTHfj9sk7hZbKB91MTgcsvCzGw54M7timKeA",
+        BasePath = "https://analytics-7777.firebaseio.com/"
+    };
+
+    IFirebaseClient client;
+
     public void pageLoad()
     {
-        //sql.update("tblVisita", "1=1", "cont = cont + 1");
+        client = new FireSharp.FirebaseClient(config);
+        if (client != null) System.Web.HttpContext.Current.Response.Write("<script>alert('foi caraiio');</script>");
+
         if (Environment.MachineName.Equals("PALMA-PC"))
         {
             Conexao.param = "Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
