@@ -9,6 +9,7 @@ using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
 
+
 public class Default
 {
     SQLMetodos sql = new SQLMetodos();
@@ -23,11 +24,24 @@ public class Default
 
     IFirebaseClient client;
 
-    public void pageLoad()
+    private string getActualMonth()
+    {
+        int nMes = DateTime.Today.Month;
+        string[] meses = new string[12] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
+            "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        return meses[nMes-1];
+    }
+    public async System.Threading.Tasks.Task pageLoadAsync()
     {
         client = new FireSharp.FirebaseClient(config);
-        if (client != null) System.Web.HttpContext.Current.Response.Write("<script>alert('foi caraiio');</script>");
-
+        FirebaseResponse response = await client.GetTaskAsync("relatoriosMensais/site/" + DateTime.Today.Year + "/" + getActualMonth());
+        MensalData previousMensal = response.ResultAs<MensalData>();
+        MensalData newMensal = new MensalData
+        {
+            numVisitasMensais = ++previousMensal.numVisitasMensais
+        };
+        await client.UpdateTaskAsync("relatoriosMensais/site/" + DateTime.Today.Year + "/" + getActualMonth(), newMensal);
+        
         if (Environment.MachineName.Equals("PALMA-PC"))
         {
             Conexao.param = "Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";

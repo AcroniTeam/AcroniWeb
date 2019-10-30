@@ -26,7 +26,7 @@ namespace AcroniWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            d.pageLoad();
+            d.pageLoadAsync();
         }
 
         protected void BtnIrloja_Click(object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace AcroniWeb
 
             if (Session["usuarioNovo"] != null)
                 Session["usuario"] = Session["usuarioNovo"];
+            if(Session["logado"] != null)
             if (Session["logado"].ToString() == "1")
             {
                 lblUser.Text = Session["usuario"].ToString();
