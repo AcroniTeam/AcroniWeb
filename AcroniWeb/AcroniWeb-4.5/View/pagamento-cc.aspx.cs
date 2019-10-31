@@ -6,6 +6,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Boleto2Net;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
 
 namespace AcroniWeb_4._5
 {
@@ -15,6 +18,13 @@ namespace AcroniWeb_4._5
         SQLMetodos sql = new SQLMetodos();
         Utilitarios ut = new Utilitarios();
         Valida v = new Valida();
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "SkeKuTHfj9sk7hZbKB91MTgcsvCzGw54M7timKeA",
+            BasePath = "https://analytics-7777.firebaseio.com/"
+        };
+
+        IFirebaseClient client;
         protected void Page_Load(object sender, EventArgs e)
         {
             p.pageLoad(imgCards, informe);
@@ -78,33 +88,51 @@ namespace AcroniWeb_4._5
             
             if(!a.Contains(false))
             {
-                //List<String> t = (List<String>)HttpContext.Current.Session["teclados"];
-                //List<String> marcas;
-                //switch(t.Count)
-                //{
-                //    case 1:
-                //        marcas = sql.selectCampos("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + ")");
-                //        sql.insertCompra(marcas[0]);
-                //        break;
-                //    case 2:
-                //        marcas = sql.selectCampos("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + ","+t[1]+")");
-                //        sql.insertCompra(marcas[0]);
-                //        sql.insertCompra(marcas[1]);
-                //        break;
-                //    case 3:
-                //        marcas = sql.selectCampos("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + ","+t[2]+")");
-                //        sql.insertCompra(marcas[0]);
-                //        sql.insertCompra(marcas[1]);
-                //        sql.insertCompra(marcas[2]);
-                //        break;
-                //}
+                List<String> t = (List<String>)HttpContext.Current.Session["teclados"];
+                List<String> marcas;
+                switch (t.Count)
+                {
+                    case 1:
+                        updateMarcas(sql.selectCampos("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + ")"));
+                        break;
+                    case 2:
+                        updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + ")", 2));
+                        break;
+                    case 3:
+                        updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + "," + t[2] + ")",3));
+                        break;
+                }
                 
-
-                Response.Redirect("sucesso-cc.aspx");
+                Response.Redirect("sucesso-cc.aspx",false);
             }
-                
-            
-            
         }
+
+        public async void updateMarcas(List<string> marcas)
+        {
+            client = new FireSharp.FirebaseClient(config);
+            FirebaseResponse response = await client.GetTaskAsync("/relatoriosGlobais/site/marcas");
+            Marcas previousMarcas = response.ResultAs<Marcas>();
+            Marcas newMarcas = new Marcas()
+            {
+                HyperX = previousMarcas.HyperX,
+                Logitech = previousMarcas.Logitech,
+                Razer = previousMarcas.Razer,
+                Redragon = previousMarcas.Redragon
+            };
+            foreach (string marca in marcas)
+            {
+                if (marca == "Logitech")
+                    newMarcas.Logitech = ++newMarcas.Logitech;
+                else if (marca == "Hyperx")
+                    newMarcas.HyperX = ++newMarcas.HyperX;
+                else if (marca == "Razer")
+                    newMarcas.Razer = ++newMarcas.Razer;
+                else
+                    newMarcas.Redragon = ++newMarcas.Redragon;
+            }
+            await client.UpdateTaskAsync("/relatoriosGlobais/site/marcas", newMarcas);
+
+        }
+        
     }
 }

@@ -99,6 +99,27 @@ public class SQLMetodos
         }
     }
 
+    public List<string> selectMarcas(string campos, string tabela, string condicao, int tot)
+    {
+        string select = "EXEC usp_select '" + campos + "', '" + tabela + "', '" + condicao + "'";
+        using (SqlConnection conexao_SQL = new SqlConnection(Conexao.nome_conexao))
+        {
+            if (conexao_SQL.State == ConnectionState.Closed)
+                conexao_SQL.Open();
+            using (SqlCommand comando_sql = new SqlCommand(select, conexao_SQL))
+            {
+                using (SqlDataReader leitor = comando_sql.ExecuteReader())
+                {
+                    List<string> lista = new List<string>();
+                    while (leitor.Read())
+                        lista.Add(leitor.GetString(0)); 
+                    
+                    return lista;
+                }
+            }
+        }
+    }
+
     public void delete(string tabela, string condicao)
     {
         string delete = "EXEC usp_delete "+tabela+", " + condicao;

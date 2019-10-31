@@ -246,6 +246,7 @@
     <Compile Include="Controller\Default.cs" />
     <Compile Include="Controller\Carrinho.cs" />
     <Compile Include="Controller\Loja.cs" />
+    <Compile Include="Controller\Marcas.cs" />
     <Compile Include="Controller\MensalData.cs" />
     <Compile Include="Controller\Mes.cs" />
     <Compile Include="Controller\MinhaConta.cs" />
