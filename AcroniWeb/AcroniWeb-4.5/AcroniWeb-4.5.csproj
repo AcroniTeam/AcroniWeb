@@ -241,11 +241,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Ano.cs" />
     <Compile Include="Controller\Cadastro.cs" />
     <Compile Include="Controller\Default.cs" />
     <Compile Include="Controller\Carrinho.cs" />
     <Compile Include="Controller\Loja.cs" />
     <Compile Include="Controller\MensalData.cs" />
+    <Compile Include="Controller\Mes.cs" />
     <Compile Include="Controller\MinhaConta.cs" />
     <Compile Include="Controller\PagamentoCC.cs" />
     <Compile Include="View\cadastro.aspx.cs">

@@ -52,7 +52,7 @@ public class Default
             catch (Exception e)
             {
                 // Esse catch serve para caso não exista um diretorio no Frebas com o mes atual
-                AcroniWeb_4._5.Controller.Mes factualMonth = new AcroniWeb_4._5.Controller.Mes
+                Mes factualMonth = new Mes
                 {
                     mes = getActualMonth()
                 };
@@ -65,7 +65,7 @@ public class Default
         catch (Exception e)
         {
             // Esse catch serve para caso não exista um diretorio no Frebas com o ano atual
-            AcroniWeb_4._5.Controller.Ano nYear = new AcroniWeb_4._5.Controller.Ano
+            Ano nYear = new Ano
             {
                 ano = DateTime.Today.Year
             };
@@ -77,6 +77,13 @@ public class Default
     }
     public void pageLoad()
     {
+        if (System.Web.HttpContext.Current.Request.Cookies["visu"] == null)
+        {
+            analyticsSender();
+            HttpCookie cookie = new HttpCookie("visu");
+            cookie.Expires = DateTime.Now.AddDays(1);
+            HttpContext.Current.Response.Cookies.Add(cookie);
+        }
 
         if (Environment.MachineName.Equals("PALMA-PC"))
         {

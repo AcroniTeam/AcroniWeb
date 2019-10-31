@@ -858,30 +858,6 @@ C:\Users\gusta\OneDrive\Documentos\-- Minha Tralha\Developer\GitHub\AcroniWeb\Ac
 C:\Users\gusta\OneDrive\Documentos\-- Minha Tralha\Developer\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
 C:\Users\gusta\OneDrive\Documentos\-- Minha Tralha\Developer\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 C:\Users\gusta\OneDrive\Documentos\-- Minha Tralha\Developer\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\x64\libsass.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll.config
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.pdb
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Antlr3.Runtime.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\LibSassHost.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.Core.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.Web.Infrastructure.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Newtonsoft.Json.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Owin.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\System.Web.Optimization.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\WebGrease.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Antlr3.Runtime.pdb
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\LibSassHost.xml
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.Core.xml
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Newtonsoft.Json.xml
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\System.Web.Optimization.xml
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csprojAssemblyReference.cache
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CoreCompileInputs.cache
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
 C:\Users\Lab\Desktop\AcroniWeb-9f54f4c7b22e515a37eb783bf2fc60fce973de8d\AcroniWeb\AcroniWeb-4.5\bin\x64\libsass.dll
 C:\Users\Lab\Desktop\AcroniWeb-9f54f4c7b22e515a37eb783bf2fc60fce973de8d\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll.config
 C:\Users\Lab\Desktop\AcroniWeb-9f54f4c7b22e515a37eb783bf2fc60fce973de8d\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll
@@ -926,10 +902,6 @@ C:\Users\Lab\Desktop\AcroniWebMVClixo\AcroniWeb\AcroniWeb-4.5\bin\System.Web.Opt
 C:\Users\Lab\Desktop\AcroniWebMVClixo\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csprojResolveAssemblyReference.cache
 C:\Users\Lab\Desktop\AcroniWebMVClixo\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 C:\Users\Lab\Desktop\AcroniWebMVClixo\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Boleto2Net.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\NReco.PdfGenerator.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Boleto2Net.pdb
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\NReco.PdfGenerator.xml
 C:\Users\gusta\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\x64\libsass.dll
 C:\Users\gusta\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll.config
 C:\Users\gusta\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll
@@ -986,10 +958,6 @@ C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\Ac
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.Serialization.JsonNet.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.dll
-F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.xml
 C:\Users\Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\x64\libsass.dll
 C:\Users\Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll.config
 C:\Users\Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll
@@ -1053,3 +1021,35 @@ C:\Users\iwakura\Documents\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb
 C:\Users\iwakura\Documents\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
 C:\Users\iwakura\Documents\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 C:\Users\iwakura\Documents\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\x64\libsass.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll.config
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\AcroniWeb-4.5.pdb
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Antlr3.Runtime.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Boleto2Net.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.Serialization.JsonNet.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\LibSassHost.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.Core.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.Web.Infrastructure.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Newtonsoft.Json.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Owin.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\System.Web.Optimization.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\WebGrease.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\NReco.PdfGenerator.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Boleto2Net.pdb
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Antlr3.Runtime.pdb
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\LibSassHost.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.Core.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Newtonsoft.Json.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\System.Web.Optimization.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\NReco.PdfGenerator.xml
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csprojAssemblyReference.cache
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CoreCompileInputs.cache
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
