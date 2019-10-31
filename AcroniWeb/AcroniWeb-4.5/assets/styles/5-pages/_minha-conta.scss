@@ -148,6 +148,10 @@
     font-weight: $semi-bold;
     margin-bottom: 10px;
 
+    &.light{
+        background:#fff
+    }
+
     .p {
         position: absolute;
         top: 10px;

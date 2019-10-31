@@ -4,6 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="bg-carrinho">
     <div class="m-div carrinho">
         <div class="left left-carrinho">
             <h1 style="margin-bottom:20px">Escolher pagamento</h1>
@@ -63,5 +64,5 @@
             </div>
         </div>
     </div>
-
+    </div>
 </asp:Content>

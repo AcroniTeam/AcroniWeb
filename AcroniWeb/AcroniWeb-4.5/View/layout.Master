@@ -37,23 +37,7 @@
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-
-
-       <footer id="footi">
-           <div class="align-logo">
-               <img alt="logo Acroni" src="../assets/img/acroni-logo.png"/>
-               <h1>Acroni</h1>
-           </div>
-           <div class="pedope">
-               <ul id="footi-items">
-                   <li><a href="#download">Download</a></li>|
-                   <li><a href="construct.aspx">Fale conosco</a></li>|
-                   <li><a href="loja.aspx">Loja</a></li>|
-                   <li><a href="construct.aspx">Unidades presenciais</a></li>
-               </ul>
-               <p>O mais brabo grupo de TCM A.K.A (Motinhas Corp.), 2018. Todos os direitos reservados.</p>
-           </div>
-        </footer>      
+    
     </form>
 
     <script src="../assets/scripts/vendors/jquery.js"></script>

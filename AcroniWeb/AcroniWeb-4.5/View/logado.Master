@@ -39,7 +39,7 @@
                     <div class="menu-lateral" style="height: 100%">
                         <a id="galeria" href="galeria.aspx">Minha galeria</a>
                         <a id="minha-conta" href="minha-conta.aspx">Editar minha conta</a>
-                        <a id="pagamento" href="pagamento.aspx">Pagamento</a>
+                        <%--<a id="pagamento" href="pagamento.aspx">Pagamento</a>--%>
                        <%-- <a id="fale-conosco" href="construct.aspx">Fale conosco</a>
                         <a id="quem-somos" href="construct.aspx">Quem somos</a>--%>
                         <a id="download" href="download.aspx">Download</a>

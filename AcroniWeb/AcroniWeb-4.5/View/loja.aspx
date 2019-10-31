@@ -167,5 +167,21 @@
     <!--<a href="Produto<%# Eval("id") %>.aspx"><div class="info">-->
     <!--<a href="Produto<%# Eval("id") %>.aspx">Produto <%# Eval("id") %></a>-->
     
+           <footer id="footi">
+           <div class="align-logo">
+               <img alt="logo Acroni" src="../assets/img/acroni-logo.png"/>
+               <h1>Acroni</h1>
+           </div>
+           <div class="pedope">
+               <ul id="footi-items">
+                   <li><a href="#download">Download</a></li>|
+                  <%-- <li><a href="construct.aspx">Fale conosco</a></li>|--%>
+                   <li><a href="loja.aspx">Loja</a></li>|
+                   <%--<li><a href="construct.aspx">Unidades presenciais</a></li>--%>
+               </ul>
+               <p>Acroni, 2019. Todos os direitos reservados.</p>
+           </div>
+        </footer>  
+
 </asp:Content>
 

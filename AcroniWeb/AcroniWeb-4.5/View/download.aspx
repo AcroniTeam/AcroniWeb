@@ -14,7 +14,7 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <section id="download">
+     <section id="download" class="download-lol">
          <img alt="imagem do software de customização" src="../assets/img/pczinho.png" style="width:50%"/>
         <div class="align-text">
             <div class="text">

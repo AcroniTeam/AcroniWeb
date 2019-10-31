@@ -8,11 +8,12 @@
     </div>
    <ul id="menu-items">
         <li><a id="loja" href="loja.aspx" runat="server">Loja</a></li>
-        <li><a id="sobre" href="cadastro.aspx" runat="server">Cadastrar</a></li>
+        <%--<li><a id="sobre" href="cadastro.aspx" runat="server">Cadastrar</a></li>--%>
         <%--<li><a id="cadastro" href="cadastro.aspx">Cadastrar</a></li>--%>
    </ul>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="bg-carrinho">
     <div class="m-div carrinho">
         <div class="left left-carrinho">
             <h1>Meu carrinho</h1>
@@ -51,6 +52,12 @@
                 
                 <asp:TextBox ID="txtFrete" class="textbox focus textbox-eas-2 textbox-type2 carrinho txt-frete" runat="server" placeholder="Digite o CEP"></asp:TextBox>
                 <input id="freteCarrinho" class="button dark button-type2" type="button" name="name" value="Calcular" />
+            </div>
+            <h1 class="frete-h1" style="margin-top:30px;"> Use seu cupom de desconto </h1>
+            <div class="textbox-type2-overflow eas-overflow frete-carrinho" >
+                
+                <asp:TextBox ID="txtDesconto" class="textbox focus textbox-eas-2 textbox-type2 carrinho txt-frete" runat="server" placeholder="Digite o cupom"></asp:TextBox>
+                <input id="descontoCarrinho" class="button dark button-type2" type="button" name="name" value="Usar cupom" />
             </div>
         </div>
         <div class="right right-carrinho">
@@ -98,5 +105,5 @@
             </div>
         </div>
     </div>
-    
+    </div>
 </asp:Content>

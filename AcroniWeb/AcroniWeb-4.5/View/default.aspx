@@ -147,7 +147,7 @@
     <section id="video">
         <div class="conteiner">
             <div class="c-video">
-                <video class="video" src="../assets/video/Propaganda.mp4" id="videozinho" poster="assets/img/acroni.png"></video>
+                <video class="video" src="../assets/video/Propaganda.mp4" id="videozinho" poster="../assets/img/acroni.png"></video>
                 <div class="play-button" onclick="toggleVideo();">
                     <i class="material-icons" id="play-pause"></i>
                     <%--<button id="play-pause" type="button" ></button>--%>
@@ -193,7 +193,8 @@
                 <h3>Características</h3>
             </header>
             <ul>
-                <li><p style="line-height: 5px;margin-bottom:20px">Acesso a 3 teclados<br/> customizados;</p></li>
+                <li><p style="line-height: 5px;margin-bottom:20px">Acesso a 3 teclados</p>
+                    <p style="line-height: 5px;margin-bottom:15px">customizados;</p></li>
                 <li><p>Acesso a 5 coleções;</p></li>
                 <li><p class="blue-left">Customização</p><p class="blue">limitada</p>;</li>
             </ul>
@@ -205,10 +206,12 @@
                 <h3>Características</h3>
             </header>
             <ul>
-                <li><p style="line-height: 5px;margin-bottom:20px">Acesso a 10 teclados<br/> customizados;</p></li>
+                <li><p style="line-height: 5px;margin-bottom:15px">Acesso a 10 teclados</p>
+                    <p style="line-height: 5px;margin-bottom:20px">customizados;</p></li>
                 <li><p>Acesso a 15 coleções;</p></li>
                 <li><p class="blue-left">Customização</p><p class="blue">completa</p>;</li>
-                <li><p style="line-height: 5px;">Descontos exclusivos <br/> nos teclados da loja;</p></li>
+                <li><p style="line-height: 5px;margin-bottom:15px">Descontos exclusivos</p>
+                    <p style="line-height: 5px;"> nos teclados da loja;</p></li>
             </ul>
             <asp:Button ID="btnPlano" runat="server" Text="Quero agora!" class="button dark button-gradient" disabled/>
         </div>
@@ -291,6 +294,22 @@
      </section>
     <section id="last-section"></section>  
 </div>     
+
+           <footer id="footi">
+           <div class="align-logo">
+               <img alt="logo Acroni" src="../assets/img/acroni-logo.png"/>
+               <h1>Acroni</h1>
+           </div>
+           <div class="pedope">
+               <ul id="footi-items">
+                   <li><a href="#download">Download</a></li>|
+                  <%-- <li><a href="construct.aspx">Fale conosco</a></li>|--%>
+                   <li><a href="loja.aspx">Loja</a></li>|
+                   <%--<li><a href="construct.aspx">Unidades presenciais</a></li>--%>
+               </ul>
+               <p>Acroni, 2019. Todos os direitos reservados.</p>
+           </div>
+        </footer>  
     
     <!-- Scripts -->
 
