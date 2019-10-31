@@ -29,19 +29,55 @@ public class Default
         int nMes = DateTime.Today.Month;
         string[] meses = new string[12] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
             "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-        return meses[nMes-1];
+        return meses[nMes - 1];
     }
-    public async System.Threading.Tasks.Task pageLoadAsync()
+
+    public async void analyticsSender()
     {
         client = new FireSharp.FirebaseClient(config);
-        FirebaseResponse response = await client.GetTaskAsync("relatoriosMensais/site/" + DateTime.Today.Year + "/" + getActualMonth());
-        MensalData previousMensal = response.ResultAs<MensalData>();
-        MensalData newMensal = new MensalData
+        try
         {
-            numVisitasMensais = ++previousMensal.numVisitasMensais
-        };
-        await client.UpdateTaskAsync("relatoriosMensais/site/" + DateTime.Today.Year + "/" + getActualMonth(), newMensal);
-        
+            FirebaseResponse response = await client.GetTaskAsync("/relatoriosMensais/site/" + DateTime.Today.Year);
+            try
+            {
+                response = await client.GetTaskAsync("/relatoriosMensais/site/" + DateTime.Today.Year + "/" + getActualMonth());
+                
+                MensalData previousMensal = response.ResultAs<MensalData>();
+                MensalData newMensal = new MensalData
+                {
+                    numVisitasMensais = ++previousMensal.numVisitasMensais
+                };
+                await client.UpdateTaskAsync("/relatoriosMensais/site/" + DateTime.Today.Year + "/" + getActualMonth(), newMensal);
+            }
+            catch (Exception e)
+            {
+                // Esse catch serve para caso não exista um diretorio no Frebas com o mes atual
+                AcroniWeb_4._5.Controller.Mes factualMonth = new AcroniWeb_4._5.Controller.Mes
+                {
+                    mes = getActualMonth()
+                };
+                await client.UpdateTaskAsync("/relatoriosMensais/site/" + DateTime.Today.Year, factualMonth);
+
+                analyticsSender();
+                // Exiba e.Message;
+            }
+            }
+        catch (Exception e)
+        {
+            // Esse catch serve para caso não exista um diretorio no Frebas com o ano atual
+            AcroniWeb_4._5.Controller.Ano nYear = new AcroniWeb_4._5.Controller.Ano
+            {
+                ano = DateTime.Today.Year
+            };
+            await client.UpdateTaskAsync("/relatoriosMensais/site", nYear);
+
+            analyticsSender();
+            // Exiba e.Message;
+        }
+    }
+    public void pageLoad()
+    {
+
         if (Environment.MachineName.Equals("PALMA-PC"))
         {
             Conexao.param = "Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
@@ -103,7 +139,7 @@ public class Default
                         HttpContext.Current.Session["logado"] = "0";
                     }
                 }
-                catch (Exception ex){ }
+                catch (Exception ex) { }
             }
             else
             {
@@ -242,7 +278,7 @@ public class Default
         }
     }
 
-    
+
 
 }
 
