@@ -89,20 +89,26 @@ namespace AcroniWeb_4._5
             if(!a.Contains(false))
             {
                 List<String> t = (List<String>)HttpContext.Current.Session["teclados"];
-                List<String> marcas;
-                switch (t.Count)
+                if (t != null)
                 {
-                    case 1:
-                        updateMarcas(sql.selectCampos("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + ")"));
-                        break;
-                    case 2:
-                        updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + ")", 2));
-                        break;
-                    case 3:
-                        updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + "," + t[2] + ")",3));
-                        break;
+                    List<String> marcas;
+                    switch (t.Count)
+                    {
+                        case 1:
+                            updateMarcas(sql.selectCampos("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + ")"));
+                            break;
+                        case 2:
+                            updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + ")", 2));
+                            break;
+                        case 3:
+                            updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + "," + t[2] + ")", 3));
+                            break;
+                    }
+                } 
+                if (Request.QueryString["q"] == "p")
+                {
+                    sql.update("tblCliente", "'usuario = ''" + HttpContext.Current.Session["usuario"] + "'''", "'tipoConta = ''p'''");
                 }
-                
                 Response.Redirect("sucesso-cc.aspx",false);
             }
         }

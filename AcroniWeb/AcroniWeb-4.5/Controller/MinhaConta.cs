@@ -318,8 +318,8 @@ public class MinhaConta
     {
         button.Attributes.Add("style", "display:none");
         btnReload.Attributes.Add("style", "display:block;float:initial;margin: auto;");
-        sql.update("tblCliente", "'usuario = ''" + HttpContext.Current.Session["usuario"] + "'''", "'tipoConta = ''p'''");
-        ut.showErrorMessage("Não era pra ser assim!", "Agora você é um usuário premium, usou de meios ilícitos mais é", titleErro, msgErro, modal, modalback, overflow);
+
+        HttpContext.Current.Response.Redirect("pagamento-cc.aspx?type=cc&q=p");
     }
 
     public void btnExcluiConta()

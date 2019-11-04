@@ -26,7 +26,10 @@ namespace AcroniWeb_4._5.View
 
         protected void btnEntra_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login-carrinho.aspx");
+            if (txtFrete.Text != "")
+                Response.Redirect("login-carrinho.aspx");
+            else
+                Response.Write("<script>alert('Digite o frete para prosseguir');</script>");
         }
     }
 }
