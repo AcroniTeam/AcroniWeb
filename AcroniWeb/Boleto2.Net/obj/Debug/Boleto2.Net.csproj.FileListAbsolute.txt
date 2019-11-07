@@ -76,3 +76,12 @@ F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Bole
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csproj.CopyComplete
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.dll
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.pdb
+C:\Users\gui_m\Documents\GitHub\Last-Commit\Recursos\Referencias\Boleto2.Net\Boleto2Net.dll
+C:\Users\gui_m\Documents\GitHub\Last-Commit\Recursos\Referencias\Boleto2.Net\Boleto2Net.pdb
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csprojAssemblyReference.cache
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.Html.resources
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csproj.GenerateResource.cache
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csproj.CoreCompileInputs.cache
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csproj.CopyComplete
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.dll
+C:\Users\gui_m\Documents\GitHub\Last-Commit\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.pdb

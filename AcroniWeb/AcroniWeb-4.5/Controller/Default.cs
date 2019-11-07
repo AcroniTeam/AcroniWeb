@@ -79,11 +79,10 @@ public class Default
     {
         
 
-        if (Environment.MachineName.Equals("PALMA-PC"))
-        {
+        
             Conexao.param = "Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
             Conexao.nome_conexao = "Data Source = " + Environment.MachineName + "; Initial Catalog = ACRONI_SQL; User ID = Acroni; Password = acroni7";
-        }
+        
         System.Web.HttpContext.Current.Session["logado"] = "0";
 
         if (System.Web.HttpContext.Current.Request.Cookies["credenciais"] != null)

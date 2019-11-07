@@ -43,10 +43,9 @@ public class Carrinho
             }
         }
             List<String> teclados = (List<String>)HttpContext.Current.Session["teclados"];
-        if (teclados == null || teclados.Count == 0)
-            HttpContext.Current.Response.Redirect("loja.aspx");
         
-        if (teclados.Count > 0)
+        
+        if (teclados != null && teclados.Count > 0)
         {
             if (teclados.Count == 3)
             {

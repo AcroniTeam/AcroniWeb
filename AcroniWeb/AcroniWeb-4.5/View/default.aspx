@@ -242,7 +242,7 @@
                     </div>
                     <figcaption>
                         <h1>Felipi Figueira</h1>
-                        <p>Designer</p>
+                        <p>Designer, Game</p>
                     </figcaption>
                 </figure>
             </div>
@@ -253,7 +253,7 @@
                     </div>
                     <figcaption>
                         <h1>Gabriel Braga</h1>
-                        <p>Desenvolvedor <br /> Desktop</p>
+                        <p>Desenvolvedor <br /> Desktop, Game</p>
                     </figcaption>
                 </figure>
             </div>
@@ -264,7 +264,7 @@
                     </div>
                     <figcaption>
                         <h1>Guilherme Mota</h1>
-                        <p>Desenvolvedor <br /> Desktop</p>
+                        <p>Desenvolvedor <br /> Desktop, Game</p>
                     </figcaption>
                 </figure>
             </div>
@@ -275,7 +275,7 @@
                     </div>
                     <figcaption>
                         <h1>Gustavo Palma</h1>
-                        <p>Desenvolvedor <br /> Web</p>
+                        <p>Desenvolvedor <br /> Web, Analytics</p>
                     </figcaption>
                 </figure>
             </div>
@@ -286,7 +286,7 @@
                     </div>
                     <figcaption>
                         <h1>Gustavo Pereira</h1>
-                        <p>Desenvolvedor <br /> Web</p>
+                        <p>Desenvolvedor <br /> Web, Game</p>
                     </figcaption>
                 </figure>
             </div>
