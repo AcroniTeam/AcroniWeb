@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FireSharp.Config;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,12 @@ public class MinhaConta
     SQLMetodos sql = new SQLMetodos();
     Utilitarios ut = new Utilitarios();
     Valida v = new Valida();
+    IFirebaseConfig config = new FirebaseConfig
+    {
+        AuthSecret = "SkeKuTHfj9sk7hZbKB91MTgcsvCzGw54M7timKeA",
+        BasePath = "https://analytics-7777.firebaseio.com/"
+    };
+
     public void pageLoad(TextBox Nome, TextBox CPF, TextBox CEP, TextBox Email, TextBox Usuario, TextBox Senha, Image fotoPerfil)
     {
         string urlFotoPerfil = "";

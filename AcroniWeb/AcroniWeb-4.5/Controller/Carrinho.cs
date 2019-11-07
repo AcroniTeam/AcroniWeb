@@ -1,19 +1,31 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 public class Carrinho
 {
     SQLMetodos sql = new SQLMetodos();
     DataSet ds;
-    public void pageLoad(DataList DataList1, Label preco, Label lblTotal)
+    IFirebaseConfig config = new FirebaseConfig
+    {
+        AuthSecret = "SkeKuTHfj9sk7hZbKB91MTgcsvCzGw54M7timKeA",
+        BasePath = "https://analytics-7777.firebaseio.com/"
+    };
+    IFirebaseClient client;
+
+    public void pageLoad(DataList DataList1, Label preco, Label lblTotal, Label lblDesconto)
     {
         string CurrentUrl = HttpContext.Current.Request.Url.AbsoluteUri;
         CurrentUrl = CurrentUrl.Substring(CurrentUrl.LastIndexOf("=") + 1);
+
+        if (HttpContext.Current.Session["logado"].ToString() != "1" || HttpContext.Current.Session["usuario"].ToString() == null)
+            HttpContext.Current.Response.Redirect("login-carrinho.aspx?id="+CurrentUrl, false);
 
         if (CurrentUrl != "0")
         {
@@ -33,7 +45,7 @@ public class Carrinho
             List<String> teclados = (List<String>)HttpContext.Current.Session["teclados"];
         if (teclados == null || teclados.Count == 0)
             HttpContext.Current.Response.Redirect("loja.aspx");
-
+        
         if (teclados.Count > 0)
         {
             if (teclados.Count == 3)
@@ -42,6 +54,7 @@ public class Carrinho
                 preco.Text = "R$" + (Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[2]["preco"]));
                 lblTotal.Text = "R$" + (Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[2]["preco"]));
                 HttpContext.Current.Session["valorF"] = (Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[2]["preco"]));
+                getDesconto(lblDesconto, lblTotal);
             }
             else if (teclados.Count == 2)
             {
@@ -49,6 +62,7 @@ public class Carrinho
                 preco.Text = "R$" + (Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["preco"]));
                 lblTotal.Text = "R$" + (Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["preco"]));
                 HttpContext.Current.Session["valorF"] = (Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["preco"]));
+                getDesconto(lblDesconto, lblTotal);
             }
             else if (teclados.Count == 1)
             {
@@ -56,12 +70,44 @@ public class Carrinho
                 preco.Text = "R$" + Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]);
                 lblTotal.Text = "R$" + Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]);
                 HttpContext.Current.Session["valorF"] = Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]);
+                getDesconto(lblDesconto, lblTotal);
             }
+
+            
             DataList1.DataSource = ds.Tables[0];
             DataList1.DataBind();
+            
+
         }
 
 
     }
 
+    public async void getDesconto(Label desconto, Label lblTotal)
+    {
+        try
+        {
+            client = new FireSharp.FirebaseClient(config);
+            string q = sql.selectCampos("email", "tblCliente", "usuario = ''" + HttpContext.Current.Session["usuario"].ToString() + "''")[0].Replace(".", ",");
+            FirebaseResponse response = await client.GetTaskAsync("/sample/-LrQ39Kn5629t6fgDYpA/game/descontos/" + q);
+            Desconto desc = response.ResultAs<Desconto>();
+            double pdesc = 0;
+            if (desc.wasUsed != "True")
+            {
+                pdesc = (desc.qtdDesconto / 100f);
+                desconto.Text = "R$"+(String.Format("{0:0.00}", pdesc * Convert.ToDouble(HttpContext.Current.Session["valorF"].ToString()))).ToString() + " ("+desc.qtdDesconto+"%)";
+                lblTotal.Text = "R$"+(String.Format("{0:0.00}", (1 - pdesc) * Convert.ToDouble(HttpContext.Current.Session["valorF"].ToString()))).ToString();
+            }
+            else
+            {
+                desconto.Text = "R$" + (String.Format("{0:0.00}", pdesc * Convert.ToDouble(HttpContext.Current.Session["valorF"].ToString()))).ToString() + " (" + pdesc + "%)";
+                lblTotal.Text = "R$" + (String.Format("{0:0.00}", (1 - pdesc) * Convert.ToDouble(HttpContext.Current.Session["valorF"].ToString()))).ToString();
+            }
+        }
+        catch (Exception e)
+        {
+            desconto.Text = "R$0,00";
+            lblTotal.Text = "R$"+ String.Format("{0:0.00}", Convert.ToDouble(HttpContext.Current.Session["valorF"].ToString()));
+        }
+    }
 }

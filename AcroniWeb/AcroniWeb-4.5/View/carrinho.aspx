@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/layout.Master" AutoEventWireup="true" CodeBehind="carrinho.aspx.cs" Inherits="AcroniWeb_4._5.View.carrinho" EnableEventValidation="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/layout.Master" AutoEventWireup="true" CodeBehind="carrinho.aspx.cs" Inherits="AcroniWeb_4._5.View.carrinho" EnableEventValidation="false" Async="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </asp:Content>
@@ -86,7 +86,7 @@
                                 <asp:Label ID="Label2" runat="server" Text='Descontos'></asp:Label>
                             </div>
                             <div class="resumo-item-valor">
-                                <asp:Label ID="Label3" runat="server" Text='R$'></asp:Label>
+                                <asp:Label ID="lblDesconto" runat="server" Text='R$'></asp:Label>
                             </div>
                         </li>
                                                 

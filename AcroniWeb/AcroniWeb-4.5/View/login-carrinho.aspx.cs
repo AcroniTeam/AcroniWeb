@@ -25,7 +25,10 @@ namespace AcroniWeb_4._5.View
 
         protected void btnEntra_Click(object sender, EventArgs e)
         {
-            d.btnEntra(txtUsu, txtPass, ckbLogin, lblMsg, "~/View/escolher-pagamento.aspx");
+            if (HttpContext.Current.Request.QueryString["id"] != null)
+                d.btnEntra(txtUsu, txtPass, ckbLogin, lblMsg, "~/View/carrinho.aspx?id="+ HttpContext.Current.Request.QueryString["id"]);
+            else
+                d.btnEntra(txtUsu, txtPass, ckbLogin, lblMsg, "~/View/escolher-pagamento.aspx");
             SCPanel.Update();
         }
 

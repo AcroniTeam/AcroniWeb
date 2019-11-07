@@ -109,6 +109,7 @@ namespace AcroniWeb_4._5
                 {
                     sql.update("tblCliente", "'usuario = ''" + HttpContext.Current.Session["usuario"] + "'''", "'tipoConta = ''p'''");
                 }
+                HttpContext.Current.Session["teclados"] = null;
                 Response.Redirect("sucesso-cc.aspx",false);
             }
         }
@@ -138,6 +139,22 @@ namespace AcroniWeb_4._5
             }
             await client.UpdateTaskAsync("/relatoriosGlobais/site/marcas", newMarcas);
 
+            try
+            {
+                string q = sql.selectCampos("email", "tblCliente", "usuario = ''" + HttpContext.Current.Session["usuario"].ToString() + "''")[0].Replace(".", ",");
+                response = await client.GetTaskAsync("/sample/-LrQ39Kn5629t6fgDYpA/game/descontos/" + q);
+                Desconto d = response.ResultAs<Desconto>();
+                Desconto newD = new Desconto
+                {
+                    qtdDesconto = d.qtdDesconto,
+                    wasUsed = "True"
+                };
+                await client.UpdateTaskAsync("/sample/-LrQ39Kn5629t6fgDYpA/game/descontos/" + q, newD);
+            }
+            catch(Exception e)
+            {
+
+            }
         }
         
     }

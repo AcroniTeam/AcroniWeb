@@ -16,8 +16,11 @@ namespace AcroniWeb_4._5.View
         {
             lblPreco.Text = "R$ " + Session["valorF"].ToString();
             lblFrete.Text = "R$ " + Session["frete"].ToString();
-            lblTotal.Text = "R$ "+(Convert.ToDouble(Session["valorF"]) + Convert.ToDouble(Session["frete"])).ToString().Replace(".", ",");
-            lblValorTotalBoleto.Text = "R$ " + (Convert.ToDouble(Session["valorF"]) + Convert.ToDouble(Session["frete"])).ToString().Replace(".", ",");
+            String b = HttpContext.Current.Session["desconto"].ToString().Split(' ')[0];
+            double a = Convert.ToDouble(b);
+            lblDesconto.Text = "R$" + (String.Format("{0:0.00}", a.ToString()));
+            lblTotal.Text = "R$ "+(Convert.ToDouble(Session["valorF"]) + Convert.ToDouble(Session["frete"]) - a).ToString().Replace(".", ",");
+            lblValorTotalBoleto.Text = "R$ " + (Convert.ToDouble(Session["valorF"]) + Convert.ToDouble(Session["frete"]) - a).ToString().Replace(".", ",");
         }
 
         protected void btnGerar_Click(object sender, EventArgs e)

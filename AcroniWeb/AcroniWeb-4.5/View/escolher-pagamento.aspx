@@ -8,12 +8,12 @@
     <div class="m-div carrinho">
         <div class="left left-carrinho">
             <h1 style="margin-bottom:20px">Escolher pagamento</h1>
-            <h3> pagar com cartão </h3>
+            <h3> Pagar com cartão </h3>
             <div class="pagamento-item-carrinho">
                 <p> Page com o cartão de credito ou débito, adicione um cartão clicando no botão abaixo</p>
                 <a href="pagamento-cc.aspx?type=cc"><input type="button" class="button dark button-carrinho" value="Adicionar um novo cartão" /></a>
             </div>
-            <h3> pagar com o boleto </h3>            
+            <h3> Pagar com o boleto </h3>            
             <div class="pagamento-item-carrinho">
                 <asp:Label ID="lblValorTotalBoleto" runat="server" Text='R$ (colocar valor total aqui)'></asp:Label>
                 <p> Você poderá visualizar ou imprimir após a finalização do pedido. A data de vencimento é de X dias corridos após a conclusão do pedido. Após esta data, ele perderá a validade. </p>
@@ -47,7 +47,7 @@
                                 <asp:Label ID="Label2" runat="server" Text='Descontos'></asp:Label>
                             </div>
                             <div class="resumo-item-valor">
-                                <asp:Label ID="Label3" runat="server" Text='R$'></asp:Label>
+                                <asp:Label ID="lblDesconto" runat="server" Text='R$'></asp:Label>
                             </div>
                         </li>
                                                 

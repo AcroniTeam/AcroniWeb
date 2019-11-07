@@ -77,13 +77,7 @@ public class Default
     }
     public void pageLoad()
     {
-        if (System.Web.HttpContext.Current.Request.Cookies["visu"] == null)
-        {
-            analyticsSender();
-            HttpCookie cookie = new HttpCookie("visu");
-            cookie.Expires = DateTime.Now.AddDays(1);
-            HttpContext.Current.Response.Cookies.Add(cookie);
-        }
+        
 
         if (Environment.MachineName.Equals("PALMA-PC"))
         {
@@ -100,6 +94,13 @@ public class Default
                 HttpContext.Current.Session["logado"] = "1";
                 HttpContext.Current.Response.Redirect("~/View/galeria.aspx");
             }
+        }
+        if (System.Web.HttpContext.Current.Request.Cookies["visu"] == null)
+        {
+            analyticsSender();
+            HttpCookie cookie = new HttpCookie("visu");
+            cookie.Expires = DateTime.Now.AddDays(1);
+            HttpContext.Current.Response.Cookies.Add(cookie);
         }
     }
     public void btnEntra(TextBox txtUsu, TextBox txtPass, CheckBox ckbLogin, Label lblMsg, String redirect)
