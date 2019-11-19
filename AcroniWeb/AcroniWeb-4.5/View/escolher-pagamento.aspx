@@ -11,7 +11,7 @@
             <h3> Pagar com cartão </h3>
             <div class="pagamento-item-carrinho">
                 <p> Page com o cartão de credito ou débito, adicione um cartão clicando no botão abaixo</p>
-                <a href="pagamento-cc.aspx?type=cc"><input type="button" class="button dark button-carrinho" value="Adicionar um novo cartão" /></a>
+                <a href="pagamento-cc.aspx?type=cc"><input type="button" class="button dark button-carrinho" value="Pagar com cartão de crédito" /></a>
             </div>
             <h3> Pagar com o boleto </h3>            
             <div class="pagamento-item-carrinho">

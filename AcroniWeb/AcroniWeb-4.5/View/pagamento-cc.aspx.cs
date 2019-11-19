@@ -105,10 +105,11 @@ namespace AcroniWeb_4._5
                             break;
                     }
                 } 
-                if (Request.QueryString["q"] == "p")
+                if (t.Contains("20"))
                 {
                     sql.update("tblCliente", "'usuario = ''" + HttpContext.Current.Session["usuario"] + "'''", "'tipoConta = ''p'''");
                 }
+
                 HttpContext.Current.Session["teclados"] = null;
                 Response.Redirect("sucesso-cc.aspx",false);
             }
@@ -134,7 +135,7 @@ namespace AcroniWeb_4._5
                     newMarcas.HyperX = ++newMarcas.HyperX;
                 else if (marca == "Razer")
                     newMarcas.Razer = ++newMarcas.Razer;
-                else
+                else if (marca == "Redragon")
                     newMarcas.Redragon = ++newMarcas.Redragon;
             }
             await client.UpdateTaskAsync("/relatoriosGlobais/site/marcas", newMarcas);

@@ -19,7 +19,11 @@ namespace AcroniWeb_4._5.View
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["logado"].ToString() == "1") {
-                Response.Redirect("escolher-pagamento.aspx");
+                if (Request.QueryString["q"] != null)
+                    Response.Redirect("escolher-pagamento.aspx?q=p");
+                else
+                    Response.Redirect("escolher-pagamento.aspx");
+
             }
         }
 
