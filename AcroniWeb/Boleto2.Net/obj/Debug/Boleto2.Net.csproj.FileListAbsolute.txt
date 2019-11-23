@@ -84,3 +84,4 @@ F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Bole
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csproj.CopyComplete
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.dll
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2Net.pdb
+F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\Boleto2.Net\obj\Debug\Boleto2.Net.csprojAssemblyReference.cache

@@ -326,7 +326,7 @@ public class MinhaConta
         button.Attributes.Add("style", "display:none");
         btnReload.Attributes.Add("style", "display:block;float:initial;margin: auto;");
 
-        HttpContext.Current.Response.Redirect("pagamento-cc.aspx?type=cc&q=p");
+        HttpContext.Current.Response.Redirect("carrinho.aspx?id=20");
     }
 
     public void btnExcluiConta()
