@@ -104,13 +104,15 @@ namespace AcroniWeb_4._5
                             updateMarcas(sql.selectMarcas("marca", "tblProdutoDaLoja", "id_produto IN (" + t[0] + "," + t[1] + "," + t[2] + ")", 3));
                             break;
                     }
+                    if (t.Contains("20"))
+                    {
+                        sql.update("tblCliente", "'usuario = ''" + HttpContext.Current.Session["usuario"] + "'''", "'tipoConta = ''p'''");
+                    }
                 } 
-                if (t.Contains("20"))
-                {
-                    sql.update("tblCliente", "'usuario = ''" + HttpContext.Current.Session["usuario"] + "'''", "'tipoConta = ''p'''");
-                }
+                
 
                 HttpContext.Current.Session["teclados"] = null;
+                HttpContext.Current.Session["custom"] = null;
                 Response.Redirect("sucesso-cc.aspx",false);
             }
         }
