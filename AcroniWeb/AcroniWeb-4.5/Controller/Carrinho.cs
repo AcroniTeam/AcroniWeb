@@ -12,6 +12,7 @@ public class Carrinho
 {
     SQLMetodos sql = new SQLMetodos();
     DataSet ds;
+    DataSet ds2;
     IFirebaseConfig config = new FirebaseConfig
     {
         AuthSecret = "SkeKuTHfj9sk7hZbKB91MTgcsvCzGw54M7timKeA",
@@ -19,10 +20,10 @@ public class Carrinho
     };
     IFirebaseClient client;
 
-    public void pageLoad(DataList DataList1, Label preco, Label lblTotal, Label lblDesconto)
+    public void pageLoad(DataList DataList1, DataList DataList2, Label preco, Label lblTotal, Label lblDesconto)
     {
-        string CurrentUrl = HttpContext.Current.Request.Url.AbsoluteUri;
-        CurrentUrl = CurrentUrl.Substring(CurrentUrl.LastIndexOf("=") + 1);
+        string CurrentUrl = HttpContext.Current.Request.QueryString["id"];
+
 
         if (HttpContext.Current.Session["logado"].ToString() != "1" || HttpContext.Current.Session["usuario"].ToString() == null)
             HttpContext.Current.Response.Redirect("login-carrinho.aspx?id="+CurrentUrl, false);
@@ -41,10 +42,27 @@ public class Carrinho
                 t.Add(CurrentUrl);
                 HttpContext.Current.Session["teclados"] = t;
             }
+            
+        }
+
+        if (HttpContext.Current.Request.QueryString["c"] != null)
+        {
+            if (HttpContext.Current.Session["custom"] != null)
+            {
+                List<String> t = (List<String>)HttpContext.Current.Session["custom"];
+                t.Add(HttpContext.Current.Request.QueryString["c"].ToString());
+                HttpContext.Current.Session["custom"] = t;
+            }
+            else
+            {
+                List<String> t = new List<String>();
+                t.Add(HttpContext.Current.Request.QueryString["c"].ToString());
+                HttpContext.Current.Session["custom"] = t;
+            }
         }
             List<String> teclados = (List<String>)HttpContext.Current.Session["teclados"];
-        
-        
+        List<String> custom = (List<String>)HttpContext.Current.Session["custom"];
+
         if (teclados != null && teclados.Count > 0)
         {
             if (teclados.Count == 3)
@@ -71,12 +89,23 @@ public class Carrinho
                 HttpContext.Current.Session["valorF"] = Convert.ToDouble(ds.Tables[0].Rows[0]["preco"]);
                 getDesconto(lblDesconto, lblTotal);
             }
+            
 
             
             DataList1.DataSource = ds.Tables[0];
             DataList1.DataBind();
             
 
+        }
+        else if (custom != null && custom.Count > 0)
+        {
+            ds2 = sql.retornaDs("EXEC usp_retornaDs " + custom[0] + ",0,0,carrinhocustom");
+            preco.Text = "R$" + Convert.ToDouble(ds2.Tables[0].Rows[0]["preco"]);
+            lblTotal.Text = "R$" + Convert.ToDouble(ds2.Tables[0].Rows[0]["preco"]);
+            HttpContext.Current.Session["valorF"] = Convert.ToDouble(ds2.Tables[0].Rows[0]["preco"]);
+            DataList2.DataSource = ds2.Tables[0];
+            DataList2.DataBind();
+            getDesconto(lblDesconto, lblTotal);
         }
 
 

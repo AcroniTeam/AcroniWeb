@@ -6,11 +6,13 @@
         <ul class="grid grid2">
             <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
                 <ItemTemplate>
-                    <li>
-                        <figure class="teclado" id="teclado">
-                            <asp:Image ID="imgFoto" class="img" runat="server" ImageUrl='<%# "GetImageTeclado.aspx?id=" + Eval("id_teclado_customizado") %>' />
-                            <asp:Label class="descricao nome" ID="lblNome" runat="server" Text='<%# Bind("nickname") %>'></asp:Label>
-                        </figure>
+                    <li> 
+                        <a href="<%# "carrinho.aspx?id=0&c=" + Eval("id_teclado_customizado")%>">
+                            <figure class="teclado" id="teclado">
+                                <asp:Image ID="imgFoto" class="img" runat="server" ImageUrl='<%# "GetImageTeclado.aspx?id=" + Eval("id_teclado_customizado") %>' />
+                                <asp:Label class="descricao nome" ID="lblNome" runat="server" Text='<%# Bind("nickname") %>'></asp:Label>
+                            </figure>
+                        </a>
                     </li>
                 </ItemTemplate>
             </asp:DataList>

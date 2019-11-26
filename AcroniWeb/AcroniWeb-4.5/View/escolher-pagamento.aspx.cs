@@ -27,23 +27,31 @@ namespace AcroniWeb_4._5.View
         {
             List<string> dados = s.selectCampos("nome, cpf", "tblCliente", "usuario = ''" + Session["usuario"] + "''");
             List<string> teclados = (List<string>)Session["teclados"];
-            if (teclados.Count == 3)
+            List<string> custom = (List<string>)Session["custom"];
+            if (teclados != null)
             {
-                string t1 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[0])[0];
-                string t2 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[1])[0];
-                string t3 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[2])[0];
-                u.gerarBoleto(dados[0], dados[1], t1 + ", " + t2 + ", " + t3, 0, (Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"])));
+                if (teclados.Count == 3)
+                {
+                    string t1 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[0])[0];
+                    string t2 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[1])[0];
+                    string t3 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[2])[0];
+                    u.gerarBoleto(dados[0], dados[1], t1 + ", " + t2 + ", " + t3, 0, (Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"])));
+                }
+                else if (teclados.Count == 2)
+                {
+                    string t1 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[0])[0];
+                    string t2 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[1])[0];
+                    u.gerarBoleto(dados[0], dados[1], t1 + ", " + t2, 0, Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"]));
+                }
+                else if (teclados.Count == 1)
+                {
+                    string t1 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[0])[0];
+                    u.gerarBoleto(dados[0], dados[1], t1, 0, (Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"])));
+                }
             }
-            else if (teclados.Count == 2)
+            if (custom != null)
             {
-                string t1 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[0])[0];
-                string t2 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[1])[0];
-                u.gerarBoleto(dados[0], dados[1], t1 + ", " + t2, 0, Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"]));
-            }
-            else if (teclados.Count == 1)
-            {
-                string t1 = s.selectCampos("nome", "tblProdutoDaLoja", "id_produto = " + teclados[0])[0];
-                u.gerarBoleto(dados[0], dados[1], t1, 0, (Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"])));
+                u.gerarBoleto(dados[0], dados[1], "Teclado customizado. ", 0, (Convert.ToDecimal(Session["valorF"]) + Convert.ToDecimal(Session["frete"])));
             }
             
         }

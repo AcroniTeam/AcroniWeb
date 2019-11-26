@@ -46,6 +46,34 @@
                         </li>
                     </ItemTemplate>
                 </asp:DataList>
+                <asp:DataList ID="DataList2" runat="server" RepeatColumns="1" RepeatDirection="Horizontal">
+                    <ItemTemplate>
+                        <li>
+                            <div class="produto-carrinho">
+                                <figure class="figure-carrinho">
+                                    <asp:Image ID="imgFoto" class="img" runat="server" ImageUrl='<%# Bind("imagem_teclado","data:image/png;base64,{0}") %>'  />      
+                                </figure>
+                                <div class="desc-carrinho">
+                                    <asp:Label class="descricao nome carrinho" ID="lblNome" runat="server" Text='<%# Bind("nickname") %>'></asp:Label>
+                                    
+                                     <div style="margin-bottom: 20px;">
+                                         <asp:Label class="preco" ID="Label1" runat="server" Text='R$'></asp:Label>
+                                         <asp:Label class="preco" ID="lblPreco" runat="server" Text='<%# Bind("preco") %>'></asp:Label>
+                                     </div>
+                                </div>
+                                <div class="btns-carrinho">
+                                     <asp:Button ID="BtnDeleteItemCustom"  OnClick="BtnDeleteItem_Click" runat="server" class="btn-delete material-icons" Text='<%# Bind("id_teclado_customizado") %>'/>
+                                     <i class="delete material-icons"></i>   
+                                     <div class="qtde-carrinho">
+                                         <i class="menos material-icons"></i> 
+                                         <asp:Label class="lbl-qtde" ID="lblQtde" runat="server" Text='1'></asp:Label>
+                                         <i class="mais material-icons"></i>
+                                     </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ItemTemplate>
+                </asp:DataList>
             </ul>
             <h1 class="frete-h1"> Calcule o Frete </h1>
             <div class="textbox-type2-overflow eas-overflow frete-carrinho">
