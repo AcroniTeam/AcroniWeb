@@ -954,7 +954,6 @@ C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\Newtonso
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\System.Web.Optimization.xml
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\NReco.PdfGenerator.xml
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csprojAssemblyReference.cache
-C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
@@ -1117,3 +1116,7 @@ F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\Ac
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.csproj.CopyComplete
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.dll
 F:\Gustavo Palma\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\obj\Debug\AcroniWeb-4.5.pdb
+C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.dll
+C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\FireSharp.Serialization.JsonNet.dll
+C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.dll
+C:\Users\Gabriel\Documents\GitHub\AcroniWeb\AcroniWeb\AcroniWeb-4.5\bin\RestSharp.xml
